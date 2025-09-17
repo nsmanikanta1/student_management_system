@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Student Management System</h1>
+
+    <section id="student-section">
+        <h2>Add Student</h2>
+        <label for="student-name">Name:</label>
+        <input type="text" id="student-name" />
+        <button id="add-student-btn">Add Student</button>
+
+        <section id="student-list-section">
+            <h3>Existing Students</h3>
+            <ul id="student-list"></ul>
+        </section>
+    </section>
+
+    <section id="course-section">
+        <h2>Add Course</h2>
+        <label for="course-name">Course Name:</label>
+        <input type="text" id="course-name" />
+        <br/>
+        <label for="course-code">Course Code:</label>
+        <input type="text" id="course-code" />
+        <br/>
+        <label for="course-credits">Credits:</label>
+        <input type="number" id="course-credits" min="1" max="5" />
+        <br/>
+        <button id="add-course-btn">Add Course</button>
+
+        <section id="course-list-section">
+            <h3>Existing Courses</h3>
+            <ul id="course-list"></ul>
+        </section>
+    </section>
+
+    <section id="enrollment-section">
+        <h2>Enroll Student in Course</h2>
+        <label for="select-student">Student:</label>
+        <select id="select-student"></select>
+        <br/>
+        <label for="select-course">Course:</label>
+        <select id="select-course"></select>
+        <br/>
+        <label for="grade">Grade (A-F):</label>
+        <input type="text" id="grade" maxlength="1" />
+        <br/>
+        <button id="enroll-btn">Enroll</button>
+    </section>
+
+    <section id="display-section">
+        <h2>Students and GPA</h2>
+        <table>
+            <thead>
+                <tr><th>Student Name</th><th>Courses Enrolled</th><th>GPA</th></tr>
+            </thead>
+            <tbody id="students-table-body"></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
